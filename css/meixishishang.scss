@@ -1,5 +1,5 @@
 @charset "utf-8";
-/*重置样式*/
+/*重置样式1 */
 body, html, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, th, td, a, img, span {
   margin: 0;
   padding: 0;
@@ -140,8 +140,9 @@ body{
 .xinpin{
     width:960px;
     height:304px;
-    display:none;
+    
    
+ 
    
 }
 
@@ -498,14 +499,52 @@ body{
     background: #FFFFFF;
      }
 }
-
+//轮播图
 .flb8{
     width:962px;
     height:296px;
     border:1px solid red;
 }
 
+#boxl{
+                 width:962px;
+                height:296px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            #boxl01{
+                 width:962px;
+                height:296px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #boxl01 div{
+                float: left;
+                width: 200px;
+                height: 300px;
+                font-size: 74px;
+                text-align: center;
+                font-weight: 900;
+            }
+            #boxl02{
+                width: 1000px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 1000px;
+            }
+            #boxl02 div{
+                float: left;
+                width: 200px;
+                height: 300px;
+                font-size: 74px;
+                text-align: center;
+                font-weight: 900;
+            }
 
+//轮播图
 .box4{
     text-align: center;
     margin-top: -11px;

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>美西时尚</title>
-		<link type="text/css" rel="stylesheet" href="css/meixishishang.css" />
+		<link type="text/css" rel="stylesheet" href="css/meixishishang.css"/>
 	</head>
 	<body>
 		
@@ -44,20 +44,20 @@
 				<div class="buttonheader left" style="margin-left: 54px;">
 					<ul id="leimu01 clear">
 						<li><a href="a">首页</a></li>
-						<li><a href="a">新进单品</a></li>
+						<li class="touch"><a href="a">新进单品</a></li>
 						<li><a href="a">全球购</a></li>
-						<li><a href="a">女士</a></li>
-						<li><a href="a">男士</a></li>
-						<li><a href="a">童装</a></li>
-						<li><a href="a">腕表</a></li>
-						<li><a href="a">品牌</a></li>
-						<li><a href="a">特惠区</a></li>
-						<li><a href="a">M潮流</a></li>
+						<li class="touch"><a href="a">女士</a></li>
+						<li class="touch"><a href="a">男士</a></li>
+						<li class="touch"><a href="a">童装</a></li>
+						<li class="touch"><a href="a">腕表</a></li>
+						<li class="touch"><a href="a">品牌</a></li>
+						<li class="touch"><a href="a">特惠区</a></li>
+						<li><a href="a" style="width:96; height:31px; background:#8e0c3a;">M潮流</a></li>
 					<ul></div>
 						<!--新近-->
-						<div class="xinpin" style="width:960px; left:-96px; margin-top:28px; display:none;">
+						<div class="xinpin"style=" border: solid 1px red; z-index: 100; position:fixed;top:191px;left:152px;display: none; background:#ffffff">
 							
-								<dl id="xinpin-left" style="width:100px; border:1px solid white;">
+								<dl id="xinpin-left" style="width:120px; border:1px solid white;">
 									<dt style="color:#811338; font-weight: 800;"><a href="#" style="padding:26px; color:#811338;">今日上新</a></dt>
 									<dt style="color:#811338; font-weight: 800;"><a href="#" style="padding:26px; color:#811338;">昨日上新</a></dt>
 									<dt style="color:#811338; font-weight: 800;"><a href="#" style="padding:26px; color:#811338;">本周上新</a></dt>
@@ -260,8 +260,27 @@
 			</dl>
 		</div>
 		<!--轮播图-->
-		<div class="flb8" style="margin-top:120px;">
-			轮播图
+		<div class="flb8" style="margin-top:120px; position: relative;">
+			<p class="oLeft" style="width: 30px;height: 296px;background: black;position: absolute;left: 0;top: 0;">&lt;</p>
+		<div id="boxl">
+			<div id="boxl01">
+				<div><img src="img/0001.jpg"/></div>
+				<div><img src="img/0002.jpg"/></div>
+				<div><img src="img/0003.jpg"/></div>
+				<div><img src="img/0004.jpg"/></div>
+				<div><img src="img/0005.jpg"/></div>
+			</div>	
+			<div id="boxl02">
+				<div><img src="img/0006.jpg"/></div>
+				<div><img src="img/0007.jpg"/></div>
+				<div><img src="img/0008.jpg"/></div>
+				<div><img src="img/0009.jpg"/></div>
+				<div><img src="img/0010.jpg"/></div>
+			</div>
+		
+		</div>
+		
+		<p class="oRight" style="width: 30px;height: 296px;background: black;position: absolute;right: 0;top: 0;">&gt;</p>
 		</div>
 		<!--轮播图-->
 		<div class="box4" style="margin-top:58px;">
@@ -369,7 +388,7 @@
             		</ul>
             	</div>
             	
-            	<div id="wenben1"><p style="text-align: center;">Copyright © 2008-2016 美西时尚-</p><a href="#">高端时尚生活电商</a></div>
+            	<div id="wenben" style="width:388px; margin-left:250px;">Copyright © 2008-2016 美西时尚-高端时尚生活电商</div>
             	<div id="wenben1"><a href="#">沪ICP备09001221号</a></div>
             	<div id="gslm"><img src="img/hy_83x30.png"><img src="img/ssgs2.jpg"></div>
             </div>
@@ -378,5 +397,66 @@
 		
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/lunbo.js"></script>
 <script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  		$('.touch').mousemove(function(){
+  		$('.xinpin').slideDown(200);//可以设置切换时间 
+  	});
+  		$('.touch').mouseleave(function(){
+  		$('.xinpin').slideUp("fast");
+  	});
+});
+	
+	
+	setInterval(goStep,2000)
+		
+		
+		function goStep(){
+			var num01 = parseInt($("#boxl01").css("left"));
+			if(num01<=-1000){
+				num01=1000
+			}
+			var num02 = parseInt($("#boxl02").css("left"));
+			if(num02<=-1000){
+				num02=1000
+			}
+			var m1 = num01-200;
+			var m2 = num02-200;
+	//		$("#bex").css('left',m)
+			$("#boxl01").animate({
+				left:m1,
+			});
+			$("#boxl02").animate({
+				left:m2,
+		});
+		
+	}
+	$(".oRight").click(function(){
+			goStep();
+		})
+	
+	$('.oLeft').click(function(){
+		var num01 = parseInt($("#boxl01").css("left"));
+			if(num01>=1000){
+				num01=-1000
+			}
+			var num02 = parseInt($("#boxl02").css("left"));
+			if(num02>=1000){
+				num02=-1000
+			}
+			var m1 = num01+200;
+			var m2 = num02+200;
+	//		$("#bex").css('left',m)
+			$("#boxl01").animate({
+				left:m1,
+			});
+			$("#boxl02").animate({
+				left:m2,
+		});
+		
+	})
+
+</script>
