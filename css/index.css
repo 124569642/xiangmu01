@@ -1,0 +1,106 @@
+/*重置样式*/
+body, html, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, th, td, a, img, span {
+  margin: 0;
+  padding: 0;
+  font-size: 12px; }
+
+a {
+  text-decoration: none;
+  color: #999999; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none; }
+
+body,p,h1,h3,h2,h4,h5,h6,ul,ol,dl,dd,dt,fieldset,input,form,li {						
+	margin:0;
+	padding:0
+}
+a {
+	text-decoration:none;
+}
+li { 
+	list-style:none;
+}
+img { 
+	border:none;
+}
+body { 
+	font-family:"微软雅黑";
+	background:#fff;
+}
+b,strong,em,i { 
+	font-weight:normal;
+	font-style:normal;
+}
+.left { 
+	float:left;
+}
+.right { 
+	float:right;
+}
+.wrapper { 
+	margin:0 auto;
+}
+.clear:after { 
+	content:"";
+	display:block;
+	clear:both;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+  
+  /*header*/
+ #header #topheader{
+ 	width:100%;
+ 	color:#f4f4f4;
+ }
+#header .topheader .header-left li{
+ 	float:left;
+ }
+ #header .topheader .header-right li{
+ 	float:left;
+ }
+ 
+#header .topheader .header-left li a{
+	font-size: 14px;
+	color:#6c6c6c;
+	margin-left:16px;
+}
+#header .topheader .header-right li a {
+	color:#6c6c6c;
+	font-size: 14px;
+	margin-left:25px;
+}
+
+
+/*middleheader*/
+
+.middleheader{
+	height:74px;
+	width:100%;
+	margin-top:24px;s
+}
+.middleheader .middleheader-left{
+	margin:21px 178px 20px 18px;}
+	#middleheader-center{
+		float:left;
+		width:279px;
+		margin:34px 186px 14px 0px
+	}
+#middleheader-center{
+	margin-left:94px;
+}
+.middleheader-right{
+	margin:24px 8px
+	
+}
+#searchText{
+	float:left;
+}
+#searchBtnBox{
+	float:left;
+}
